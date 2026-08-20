@@ -1,0 +1,198 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+
+/* Personalización del Sidebar - Color #6640ff y textos blancos */
+.fi-sidebar {
+    background-color: #6640ff !important;
+    width: 15rem !important; /* Sidebar optimizado (240px) */
+}
+
+/* Ajustar el contenido principal cuando el sidebar está abierto */
+@media (min-width: 1024px) {
+    .fi-sidebar-open .fi-main {
+        margin-left: 15rem !important;
+    }
+}
+
+.fi-sidebar-nav {
+    background-color: #6640ff !important;
+}
+
+/* Dark Mode - Sidebar oscuro */
+.dark .fi-sidebar {
+    background-color: #0f0f1a !important;
+}
+
+.dark .fi-sidebar-nav {
+    background-color: #0f0f1a !important;
+}
+
+/* Textos blancos en el sidebar */
+.fi-sidebar .fi-sidebar-header,
+.fi-sidebar .fi-sidebar-nav .fi-sidebar-item-label,
+.fi-sidebar .fi-sidebar-nav .fi-sidebar-item-icon {
+    color: white !important;
+}
+
+.fi-sidebar .fi-sidebar-nav .fi-sidebar-group-label,
+.fi-sidebar .fi-sidebar-nav .fi-sidebar-group button,
+.fi-sidebar .fi-sidebar-nav .fi-sidebar-group button *,
+.fi-sidebar .fi-sidebar-nav .fi-sidebar-group-label *,
+.fi-sidebar nav .fi-sidebar-group button,
+.fi-sidebar nav .fi-sidebar-group button span,
+.fi-sidebar .fi-sidebar-group-btn .fi-icon,
+.fi-sidebar .fi-sidebar-group-btn * {
+    color: white !important;
+}
+
+.fi-sidebar nav .fi-sidebar-group button svg,
+.fi-sidebar .fi-sidebar-group-btn .fi-icon svg {
+    color: white !important;
+}
+
+/* Reducir espacios entre grupos y items normales */
+.fi-sidebar .fi-sidebar-nav-groups {
+    gap: 0.25rem !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.fi-sidebar .fi-sidebar-group,
+.fi-sidebar nav .fi-sidebar-group {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.fi-sidebar .fi-sidebar-group + .fi-sidebar-group {
+    margin-top: 0.25rem !important;
+}
+
+/* Dark Mode - Items hover y activos */
+.dark .fi-sidebar .fi-sidebar-nav .fi-sidebar-item:hover,
+.dark .fi-sidebar .fi-sidebar-nav .fi-sidebar-item:focus,
+.dark .fi-sidebar .fi-sidebar-nav .fi-sidebar-item[data-hover="true"] {
+    background-color: rgba(102, 64, 255, 0.2) !important;
+}
+
+.dark .fi-sidebar .fi-sidebar-item.fi-active > .fi-sidebar-item-btn,
+.dark .fi-sidebar .fi-sidebar-item.fi-active .fi-sidebar-item-button,
+.dark .fi-sidebar .fi-sidebar-nav li[aria-current="page"] button,
+.dark .fi-sidebar .fi-sidebar-nav li[aria-current="page"] a,
+.dark .fi-sidebar nav li[aria-current="page"] button,
+.dark .fi-sidebar nav li[aria-current="page"] a,
+.dark .fi-sidebar nav li button[aria-current="page"],
+.dark .fi-sidebar nav li a[aria-current="page"] {
+    background-color: rgba(102, 64, 255, 0.3) !important;
+}
+
+/* Dark Mode - Textos siguen blancos */
+.dark .fi-sidebar .fi-sidebar-header,
+.dark .fi-sidebar .fi-sidebar-nav .fi-sidebar-item-label,
+.dark .fi-sidebar .fi-sidebar-nav .fi-sidebar-item-icon {
+    color: white !important;
+}
+
+.dark .fi-sidebar .fi-sidebar-nav .fi-sidebar-group-label,
+.dark .fi-sidebar .fi-sidebar-nav .fi-sidebar-group button,
+.dark .fi-sidebar .fi-sidebar-nav .fi-sidebar-group button *,
+.dark .fi-sidebar .fi-sidebar-nav .fi-sidebar-group-label * {
+    color: white !important;
+}
+
+/* Dark Mode - Hover en botones y enlaces */
+.dark .fi-sidebar .fi-sidebar-nav button:hover,
+.dark .fi-sidebar .fi-sidebar-nav a:hover {
+    background-color: rgba(102, 64, 255, 0.2) !important;
+}
+
+.dark .fi-sidebar .fi-sidebar-nav button:hover *,
+.dark .fi-sidebar .fi-sidebar-nav a:hover * {
+    color: white !important;
+}
+
+/* Dark Mode - User menu y tenant menu */
+.dark .fi-sidebar .fi-logo,
+.dark .fi-sidebar .fi-user-menu-trigger,
+.dark .fi-sidebar .fi-tenant-menu-trigger {
+    color: white !important;
+}
+
+.dark .fi-sidebar .fi-user-menu-trigger:hover,
+.dark .fi-sidebar .fi-tenant-menu-trigger:hover {
+    background-color: rgba(102, 64, 255, 0.2) !important;
+}
+
+/* Items activos del sidebar - Clase específica de Filament */
+.fi-sidebar .fi-sidebar-item.fi-active > .fi-sidebar-item-btn,
+.fi-sidebar .fi-sidebar-item.fi-active .fi-sidebar-item-button {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Forzar texto blanco en el botón del item activo */
+.fi-sidebar .fi-sidebar-item.fi-active > .fi-sidebar-item-btn *,
+.fi-sidebar .fi-sidebar-item.fi-active > .fi-sidebar-item-btn span,
+.fi-sidebar .fi-sidebar-item.fi-active > .fi-sidebar-item-btn svg,
+.fi-sidebar .fi-sidebar-item.fi-active .fi-sidebar-item-label,
+.fi-sidebar .fi-sidebar-item.fi-active .fi-sidebar-item-icon {
+    color: white !important;
+    fill: white !important;
+}
+
+/* Items activos con aria-current también */
+.fi-sidebar .fi-sidebar-nav li[aria-current="page"] button,
+.fi-sidebar .fi-sidebar-nav li[aria-current="page"] a,
+.fi-sidebar nav li[aria-current="page"] button,
+.fi-sidebar nav li[aria-current="page"] a,
+.fi-sidebar nav li button[aria-current="page"],
+.fi-sidebar nav li a[aria-current="page"] {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.fi-sidebar .fi-sidebar-nav li[aria-current="page"] *,
+.fi-sidebar nav li[aria-current="page"] *,
+.fi-sidebar nav li[aria-current="page"] span,
+.fi-sidebar nav li[aria-current="page"] svg {
+    color: white !important;
+    fill: white !important;
+}
+
+/* Hover en items del sidebar */
+.fi-sidebar .fi-sidebar-nav .fi-sidebar-item:hover,
+.fi-sidebar .fi-sidebar-nav .fi-sidebar-item:focus,
+.fi-sidebar .fi-sidebar-nav .fi-sidebar-item[data-hover="true"] {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.fi-sidebar .fi-sidebar-nav .fi-sidebar-item:hover .fi-sidebar-item-label,
+.fi-sidebar .fi-sidebar-nav .fi-sidebar-item:hover .fi-sidebar-item-icon,
+.fi-sidebar .fi-sidebar-nav .fi-sidebar-item:focus .fi-sidebar-item-label,
+.fi-sidebar .fi-sidebar-nav .fi-sidebar-item:focus .fi-sidebar-item-icon,
+.fi-sidebar .fi-sidebar-nav .fi-sidebar-item[data-hover="true"] .fi-sidebar-item-label,
+.fi-sidebar .fi-sidebar-nav .fi-sidebar-item[data-hover="true"] .fi-sidebar-item-icon {
+    color: white !important;
+}
+
+/* Forzar hover state en todos los sub-items */
+.fi-sidebar .fi-sidebar-nav button:hover,
+.fi-sidebar .fi-sidebar-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.fi-sidebar .fi-sidebar-nav button:hover *,
+.fi-sidebar .fi-sidebar-nav a:hover * {
+    color: white !important;
+}
+
+/* Logo, user menu y tenant menu */
+.fi-sidebar .fi-logo,
+.fi-sidebar .fi-user-menu-trigger,
+.fi-sidebar .fi-tenant-menu-trigger {
+    color: white !important;
+}
+
+.fi-sidebar .fi-user-menu-trigger:hover,
+.fi-sidebar .fi-tenant-menu-trigger:hover {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+}

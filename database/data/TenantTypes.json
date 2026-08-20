@@ -1,0 +1,6 @@
+[
+    { "name": "Comercio", "description": "Negocios que venden productos" },
+    { "name": "Servicios", "description": "Negocios que prestan servicios" },
+    { "name": "Industria", "description": "Negocios de producción o manufactura" },
+    { "name": "Otro", "description": "Cualquier otro tipo de negocio" }
+]
